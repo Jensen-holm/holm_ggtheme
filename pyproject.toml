@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "holm_ggtheme"
+version = "1.0.0"
+description = "A theme for plotnine"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Jensen Holm", email = "jensenh87@gmail.com" }
+]
+dependencies = ["plotnine"]
+
+[project.urls]
+Repository = "https://github.com/Jensen-holm/holm_ggtheme"
+
+[tool.hatch.build.targets.wheel]
+packages = ["holm_ggtheme"]
+
+[tool.setuptools.packages.find]
+include = ["holm_ggtheme*"]
+exclude = ["tests*", "examples*", "tests*"]
